@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+/* **공통******* */
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* div[class^="inner"] {} */
+
+header {
+    width: 100%;
+    background-color: #f6f5ef;
+    height: 115px;
+    padding: 20px 0;
+    box-sizing: border-box;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+header .inner-header {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header h1.logo {
+    float: left;
+}
+header h1.logo a {
+    display: block;
+}
+header h1.logo a  img {
+    height: 75px;
+}
+
+header nav.gnb {
+    float: right;
+}
+
+header nav.gnb ul li {
+    float: left;
+    margin-right: 40px;
+    line-height: 80px;
+    font-size: 18px;
+}
+
+header nav.gnb ul li:last-child {
+    margin-right: 0;
+}
+header nav.gnb ul li a {
+    color: #555;
+}
+
+header nav.gnb ul li a:hover {
+    color: #007042;
+    text-decoration: underline;
+}
+
+section {
+    width: 100%;
+    background: url(../img/login_bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 70px 0 80px;
+    margin-top: 115px;
+}
+
+section .inner-section {
+    width: 570px;
+    margin: 0 auto;
+}
+
+section .inner-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+    color: white;
+}
+
+section .inner-section .loginbox {
+    background-color: white;
+    color: #666;
+    padding: 20px 0;
+}
+
+.loginbox .welcome {
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 0.6px solid #eee;
+    padding-bottom: 20px;
+}
+
+.loginbox .welcome span {
+    color: #007042;
+}
+
+.loginbox .login {
+    /* form 덩어리가 들어간 div */
+    padding: 20px;
+}
+
+.loginbox .login fieldset {
+    border: none;
+}
+
+.loginbox .login fieldset legend {
+    display: none;
+}
+
+/* 아이디, 비밀번호 */
+.loginbox .login input[type="text"], .loginbox .login input[type="password"] {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    text-indent: 8px;
+}
+
+/* placeholder 색상변경 */
+input::placeholder {
+    color: #999;
+}
+
+.loginbox .login label {
+    display: block;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+.loginbox .login label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+    /* 가로 나열된 요소들을 중앙을 기준으로 맞춤 */
+}
+
+.loginbox .login input[type="submit"] {
+    width: 100%;
+    display: block;
+    border: 0;
+    line-height: 60px;
+    background-color: #007042;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.loginbox .notice {
+    padding: 0 20px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.8px;
+}
+
+.loginbox .notice li:first-child {
+    margin-bottom: 8px;
+}
+
+.loginbox .btn a {
+    font-size: 18px;
+    display: block;
+    width: 33.3%;
+    float: left;
+    margin: 20px 0;
+    color: #777;
+    text-align: center;
+    position: relative;
+}
+
+.loginbox .btn a:hover {
+    color: #007042;
+    font-weight: 600;
+}
+
+/* .loginbox .btn a~a {
+    border-left: 1px solid #ccc;
+    box-sizing: border-box;
+} */
+
+.loginbox .btn a~a::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.loginbox .btn a::after:first-child {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    background-color: #2c2a29;
+    padding: 30px 100px;
+    box-sizing: border-box;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* footer .inner-footer {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+    outline: 1px solid lightblue;
+} */
+
+footer .links {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer .links ul li {
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 40px;
+}
+footer .links ul li a:hover {
+    color: #007042;
+}
+
+footer .btngrp {
+    text-align: center;
+    margin-bottom: 40px;
+}
+footer .btngrp a {
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    width: 150px;
+    border-radius: 6px;
+    padding: 12px 0;
+}
+
+footer .btngrp a:hover {
+    width: 170px;
+}
+
+footer .info {
+    line-height: 1.6;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer .info p span {
+    margin-right: 10px;
+}
